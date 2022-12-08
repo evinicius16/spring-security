@@ -1,13 +1,14 @@
 package com.study.spring.security.service;
 
+
 import com.study.spring.security.model.Employee;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface EmployeeService {
-    void addEmployee(Employee employee);
+    Employee addEmployee(Employee employee);
     List<Employee> getAllEmployees();
-    Employee findById(Integer id);
     void updateEmployee(Employee employee);
-    Boolean deleteById(Integer id);
+    Optional<Employee> finById(Long id);
 }
